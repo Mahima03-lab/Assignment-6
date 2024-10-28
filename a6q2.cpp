@@ -25,7 +25,7 @@ cout << "val.i=" << val.i << std::endl;
     Here the foo struct has a default constructor (foo()) that prints "foo()" and a destructor (~foo()) that prints "~foo()" and integer member i initialized to 5.
     The obj struct contains a member my_foo of type foo and a method getFoo() which returns constant reference to my_foo.
     obj *o = new obj();--here o is pointer to obj type and new keyword dynamically allocates memory for an obj instance .
-    This allocation calls the constructor of obj, creating the obj instance and initializing its members.Again obj contains member my_foo of type foo so it invokes the default constructor foo and prints foo().
+    This allocation creates the obj instance and initializing its members.Again obj contains member my_foo of type foo so it invokes the default constructor foo and prints foo().
     const foo& val = o->getFoo(); -- which means val is now a constant reference to my_foo inside obj.
     Hence val.i prints 5.
     The delete o; --- deletes the obj instance o and invokes the destructor of constructor foo ,as a result ~foo() is printed.
